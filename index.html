@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+ <meta charset="UTF-8">
+ <title>User Feedback Form</title>
+ <link rel ="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="form-container" id="formContainer">
+    <h2>User Feedback Form</h2>
+    <form id="feedbackForm">
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter Username" data-tooltip="usernameTooltip">
+        <span class="tooltip" id="usernameTooltip">Your unique public handle.</span>
+        <span class="error-msg" id="usernameError"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" data-tooltip="emailTooltip">
+        <span class="tooltip" id="email">we'll never share your email.</span>
+        <span class="error-msg" id="emailError"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Enter comment"></textarea>
+        <div class="char-counter">Characters remaining: <span id="charCount">200</span></div>
+        <span class="error-msg" id="commentsError"></span>
+      </div>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <div id="feedback-display">
+    <h3>Submitted Feedback Entries</h3>
+  </div>
+
+  <script src="cp_1.js"></script>
+</body>
+</html>
